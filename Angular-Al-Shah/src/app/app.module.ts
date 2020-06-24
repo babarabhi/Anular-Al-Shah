@@ -17,6 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatFormFieldModule,  } from '@angular/material/form-field';
 // import { MatNativeDateModule } from '@angular/material/core';
 import { AllMaterialModule } from './modules/all-material.module';
+import { MatNavComponent } from './Layouts/mat-nav/mat-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { AllMaterialModule } from './modules/all-material.module';
     ProductsComponent,
     ContactUsComponent,
     Banner2Component,
-    Banner3Component
+    Banner3Component,
+    MatNavComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,13 @@ import { AllMaterialModule } from './modules/all-material.module';
     // MatDatepickerModule,
     // MatFormFieldModule,
     // MatNativeDateModule,
-    AllMaterialModule 
+    AllMaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
