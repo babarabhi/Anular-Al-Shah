@@ -10,6 +10,13 @@ import { ProductsComponent } from './Layouts/products/products.component';
 import { ContactUsComponent } from './Layouts/contact-us/contact-us.component';
 import { Banner2Component } from './Layouts/banner2/banner2.component';
 import { Banner3Component } from './Layouts/banner3/banner3.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// import {MatCheckboxModule} from '@angular/material/checkbox';
+// import {MatDatepickerModule} from '@angular/material/datepicker';
+// import {MatFormFieldModule,  } from '@angular/material/form-field';
+// import { MatNativeDateModule } from '@angular/material/core';
+import { AllMaterialModule } from './modules/all-material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,13 @@ import { Banner3Component } from './Layouts/banner3/banner3.component';
     Banner3Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    // MatCheckboxModule,
+    // MatDatepickerModule,
+    // MatFormFieldModule,
+    // MatNativeDateModule,
+    AllMaterialModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
