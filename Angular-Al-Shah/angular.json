@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/al-shah/css/materialize.min.css",
+              "node_modules/al-shah/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/al-shah/js/jquery-2.1.1.min.js",
+              "node_modules/al-shah/js/materialize.min.js",
+              "node_modules/al-shah/js/init.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,9 +94,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/al-shah/css/materialize.min.css",
+              "node_modules/al-shah/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/al-shah/js/jquery-2.1.1.min.js",
+              "node_modules/al-shah/js/materialize.min.js",
+              "node_modules/al-shah/js/init.js"
+            ]
           }
         },
         "lint": {
@@ -119,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-Al-Shah"
+    }
+  },
+  "defaultProject": "Angular-Al-Shah",
+  "cli": {
+    "analytics": false
+  }
 }
