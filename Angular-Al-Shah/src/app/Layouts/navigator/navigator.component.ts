@@ -12,4 +12,17 @@ export class NavigatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout(){
+    localStorage.removeItem("username");
+  }
+
+  isLogin():boolean{
+    if (localStorage.getItem("username") != null){
+      return true;
+    }
+    else 
+    return false;
+
+  }
+
 }
