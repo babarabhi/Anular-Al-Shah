@@ -25,6 +25,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
+import { MyDataService } from './services/my-data.service';
+import { LoginComponent } from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { PageNotFoundComponent } from './Layouts/page-not-found/page-not-found.component';
+import { AuthGuard } from './guards/auth.guard';
+import { MobilesComponent } from './products/mobiles/mobiles.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +44,11 @@ import { MatListModule } from '@angular/material/list';
     ContactUsComponent,
     Banner2Component,
     Banner3Component,
-    MatNavComponent
+    MatNavComponent,
+    LoginComponent,
+    DashboardComponent,
+    PageNotFoundComponent,
+    MobilesComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +63,10 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule 
+    MatListModule ,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [MyDataService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
