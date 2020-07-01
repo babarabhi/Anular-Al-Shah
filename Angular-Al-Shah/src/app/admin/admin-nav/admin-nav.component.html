@@ -1,14 +1,10 @@
-<nav class="blue-nav" role="navigation">
+<nav class="green-nav" role="navigation">
     <div class="nav-wrapper container ">
       <a id="logo-container" href="#" >Babar Electronics</a>
       <ul class="right hide-on-med-and-down small-font">
         <li><a class="small-font" routerLink="mobile">Mobiles</a></li>
-        <li><a class="small-font" href="#">LED</a></li>
-        <li><a class="small-font" href="#">laptop</a></li>
-        <!-- <li><a class="small-font" href="#">Refrigerator</a></li>
-        <li><a class="small-font" href="#">Air Conditioner</a></li>
-        <li><a class="small-font" href="#">Washing Machine</a></li>
-        <li><a class="small-font" href="#">Kitchen Appliances</a></li> -->
+        <li><a class="small-font" href="add">Add Products</a></li>
+        <li><a class="small-font" href="edit">Edit Products</a></li>
         <li><a class="small-font" routerLink="dashboard">Dashboard</a></li>
         <li><a *ngIf="!isLogin()" else #logout class="small-font" routerLink="login">Login</a></li>
         
@@ -21,12 +17,10 @@
         <li><a class="small-font" routerLink="mobile">Mobiles</a></li>
         <li><a class="small-font" href="#">LED</a></li>
         <li><a class="small-font" href="#">laptop</a></li>
-        <li><a class="small-font" href="#">Refrigerator</a></li>
-        <li><a class="small-font" href="#">Air Conditioner</a></li>
-        <li><a class="small-font" href="#">Washing Machine</a></li>
-        <li><a class="small-font" href="#">Kitchen Appliances</a></li>
         <li><a class="small-font" routerLink="dashboard">Dashboard</a></li>
-        <li><a class="small-font" routerLink="login">Login</a></li>
+        <li><a *ngIf="!isLogin()" class="small-font" routerLink="login">Login</a></li>
+        
+        <li><a *ngIf="isLogin()" class="small-font" routerLink="" (click)="logout()">Logout</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>

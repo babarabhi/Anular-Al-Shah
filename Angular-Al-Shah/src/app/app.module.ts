@@ -32,6 +32,9 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { PageNotFoundComponent } from './Layouts/page-not-found/page-not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 import { MobilesComponent } from './products/mobiles/mobiles.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { UserComponent } from './Layouts/user/user.component';
+import { AdminComponent } from './Layouts/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { MobilesComponent } from './products/mobiles/mobiles.component';
     LoginComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    MobilesComponent
+    MobilesComponent,
+    AdminNavComponent,
+    UserComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

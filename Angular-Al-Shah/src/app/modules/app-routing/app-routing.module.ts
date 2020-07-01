@@ -1,3 +1,5 @@
+import { AppComponent } from './../../app.component';
+import { AdminGuard } from './../../guards/admin.guard';
 import { Role } from './../../models/role.enum';
 import { AuthGuard } from './../../guards/auth.guard';
 import { MobilesComponent } from './../../products/mobiles/mobiles.component';
@@ -12,9 +14,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes:Routes = [
 {path:'',component:ProductsComponent},
-{path:'mobile',canActivate:[AuthGuard], component:MobilesComponent, data:{roles: [Role.User]}},
-{path:'dashboard', canActivate:[AuthGuard], component:DashboardComponent, data:{roles: [Role.Admin]}},
+{path:'mobile',canActivate:[AuthGuard], component:MobilesComponent},
+{path:'dashboard', canActivate:[AuthGuard, AdminGuard], component:DashboardComponent},
 {path:'login',component:LoginComponent},
+{path:'start',component:AppComponent},
 {path:'**',component:PageNotFoundComponent},
 
 

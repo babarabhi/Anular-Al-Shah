@@ -11,11 +11,16 @@ userRole:string=null;
     if (uname=="admin" && pass=="admin"){
       localStorage.setItem("username","admin")
       this.userRole = Role.Admin;
+      localStorage.setItem("Role","Admin");
+      console.log(this.userRole);
       return true;
     }
     else if (uname=="user" && pass=="user"){
       localStorage.setItem("username","user")
       this.userRole = Role.User;
+      localStorage.setItem("Role","User");
+
+      console.log(this.userRole);
       return true;
     }
     else

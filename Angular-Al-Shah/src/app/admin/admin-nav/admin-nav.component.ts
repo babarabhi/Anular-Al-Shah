@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navigator',
-  templateUrl:'./navigator.component.html' ,
-  styles:['./navigator.component.css']
+  selector: 'app-admin-nav',
+  templateUrl: './admin-nav.component.html',
+  styles: [
+  ]
 })
-export class NavigatorComponent implements OnInit {
+export class AdminNavComponent implements OnInit {
 
   constructor() { }
 
@@ -15,7 +16,6 @@ export class NavigatorComponent implements OnInit {
   logout(){
     localStorage.removeItem("username");
     localStorage.removeItem("Role");
-
   }
 
   isLogin():boolean{

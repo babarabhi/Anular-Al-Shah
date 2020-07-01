@@ -15,11 +15,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): boolean  {
       if (localStorage.getItem("username") != null)
       {
-        if (next.data.roles && next.data.roles.indexOf(this.authService.userRole) === 2) {
-          // role not authorised so redirect to home page
-          this.router.navigate(['/']);
-          return false;
-      }
+        
 
       // authorised so return true
       return true;
